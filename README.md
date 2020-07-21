@@ -3,20 +3,34 @@
 In command prompt, run 
 
 
-    git clone https://github.com/SoumyaMukhija/globalshala_frontend.git
+    git clone https://github.com/SoumyaMukhija/globalshala_front
+    git clone https://github.com/SoumyaMukhija/globalshala_back
           
           
          
-Once it has downloaded, go into the globalshala_frontend directory and run
+Once it has downloaded, go into the globalshala_back directory and run
 
 
      pip install -r requirements.txt
           
-          
 
-Your installation should be complete now. To run the app, download android emulator/iOS simulator/expo app on your device. 
-Run the following command on your machine: 
+# Steps to run: 
 
+1- Download ngrok from its website and put it in your PATH.
+
+2- In a command prompt/terminal, run 
+
+     ngrok http 5000
+
+3- Copy the https://... link that pops up. DO NOT CLOSE THIS TERMINAL. 
+
+4- Open the frontend directory. Navigate to src > utils > network_utils. Paste the https:// copied link in the BASE_URL variable. Save it and close.
+
+5- Open a new terminal. Navigate to the backend directory from the terminal and run
+
+     flask run 
+
+6- Open a new terminal. Navigate to the frontend directory from the terminal and run 
 
      expo start
           
